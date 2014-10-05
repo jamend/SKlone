@@ -1,0 +1,1153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{520942AD-F005-4BFC-B5D5-037FBB271E41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SKlone</RootNamespace>
+    <AssemblyName>SKlone</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SKlone.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SKlone.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Default.htm" />
+    <Content Include="admin\Delete.aspx" />
+    <Content Include="admin\Disable.aspx" />
+    <Content Include="admin\ErrorLog.aspx" />
+    <Content Include="admin\LogIn.aspx" />
+    <Content Include="admin\Modify.aspx" />
+    <Content Include="admin\MultiScans.aspx" />
+    <Content Include="admin\Nav.htm" />
+    <Content Include="admin\Query.aspx" />
+    <Content Include="admin\Tick.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="images\0.gif" />
+    <Content Include="images\1.gif" />
+    <Content Include="images\2.gif" />
+    <Content Include="images\3.gif" />
+    <Content Include="images\4.gif" />
+    <Content Include="images\5.gif" />
+    <Content Include="images\6.gif" />
+    <Content Include="images\7.gif" />
+    <Content Include="images\admin_back.gif" />
+    <Content Include="images\decorations\100.gif" />
+    <Content Include="images\decorations\1000.gif" />
+    <Content Include="images\decorations\2000.gif" />
+    <Content Include="images\decorations\25.gif" />
+    <Content Include="images\decorations\500.gif" />
+    <Content Include="images\decorations\5000.gif" />
+    <Content Include="images\emoticons\frown.gif" />
+    <Content Include="images\emoticons\smile.gif" />
+    <Content Include="images\emoticons\surprise.gif" />
+    <Content Include="images\emoticons\wink.gif" />
+    <Content Include="images\evil.gif" />
+    <Content Include="images\forums\bigfolder.gif" />
+    <Content Include="images\forums\button.gif" />
+    <Content Include="images\forums\cheshire.gif" />
+    <Content Include="images\forums\flower.gif" />
+    <Content Include="images\forums\kitty.gif" />
+    <Content Include="images\forums\lab.gif" />
+    <Content Include="images\forums\laptop.gif" />
+    <Content Include="images\forums\newspaper.gif" />
+    <Content Include="images\forums\somedude.gif" />
+    <Content Include="images\forums\swords.gif" />
+    <Content Include="images\forums\tropics.gif" />
+    <Content Include="images\frown.gif" />
+    <Content Include="images\locked_icon.gif" />
+    <Content Include="images\loginhr.gif" />
+    <Content Include="images\nav_back.jpg" />
+    <Content Include="images\paypal.jpg" />
+    <Content Include="images\signuphr.gif" />
+    <Content Include="images\sklone.gif" />
+    <Content Include="images\sklone.jpg" />
+    <Content Include="images\sklonebanner.jpg" />
+    <Content Include="images\sklonebar1.gif" />
+    <Content Include="images\sklonebar2.gif" />
+    <Content Include="images\sklone_logo.jpg" />
+    <Content Include="images\sklone_logob.jpg" />
+    <Content Include="images\sklone_nav.gif" />
+    <Content Include="images\sklone_nav_old.gif" />
+    <Content Include="images\smile.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\surprise.gif" />
+    <Content Include="images\th.gif" />
+    <Content Include="images\unlocked_icon.gif" />
+    <Content Include="images\wink.gif" />
+    <Content Include="images\work\moon1.bmp" />
+    <Content Include="images\work\moon3.bmp" />
+    <Content Include="images\work\moon_orig.bmp" />
+    <Content Include="images\work\sklonebanner.bmp" />
+    <Content Include="images\work\sklonebanner10.bmp" />
+    <Content Include="images\work\sklonebanner5.bmp" />
+    <Content Include="images\work\sklonebanner6.bmp" />
+    <Content Include="images\work\sklonebanner7.bmp" />
+    <Content Include="images\work\sklonebanner8.bmp" />
+    <Content Include="images\work\sklonebanner9.bmp" />
+    <Content Include="images\work\sklonebanner_plain.bmp" />
+    <Content Include="images\work\sklonebanner_plain2.bmp" />
+    <Content Include="images\work\sklonebanner_plain3.bmp" />
+    <Content Include="LogIn.aspx" />
+    <Content Include="scripts\Activate.aspx" />
+    <Content Include="scripts\AggressiveProbings.aspx" />
+    <Content Include="scripts\AllianceChooser.ascx" />
+    <Content Include="scripts\Alliancecontrol.aspx" />
+    <Content Include="scripts\AllianceForums.aspx" />
+    <Content Include="scripts\AllianceForumsThread.aspx" />
+    <Content Include="scripts\AllianceInfo.aspx" />
+    <Content Include="scripts\AllianceNews.aspx" />
+    <Content Include="scripts\Alliances.aspx" />
+    <Content Include="scripts\AllianceSectors.aspx" />
+    <Content Include="scripts\Attack.aspx" />
+    <Content Include="scripts\BottomInfoBar.ascx" />
+    <Content Include="scripts\Buildings.aspx" />
+    <Content Include="scripts\CalcB.aspx" />
+    <Content Include="scripts\ConstructionStatus.ascx" />
+    <Content Include="scripts\ConstructionStatus.aspx" />
+    <Content Include="scripts\Dead.aspx" />
+    <Content Include="scripts\Default.htm" />
+    <Content Include="scripts\Delete.aspx" />
+    <Content Include="scripts\Disband.aspx" />
+    <Content Include="scripts\evil.gif" />
+    <Content Include="scripts\Explore.aspx" />
+    <Content Include="scripts\Forums.aspx" />
+    <Content Include="scripts\ForumsThread.aspx" />
+    <Content Include="scripts\GalaxyLand.aspx" />
+    <Content Include="scripts\GalaxyNetworth.aspx" />
+    <Content Include="scripts\KingdomChooser.ascx" />
+    <Content Include="scripts\LargestLandGrab.aspx" />
+    <Content Include="scripts\locked_icon.gif" />
+    <Content Include="scripts\LogIn.aspx" />
+    <Content Include="scripts\LogOut.aspx" />
+    <Content Include="scripts\Military.aspx" />
+    <Content Include="scripts\MilitaryStatus.aspx" />
+    <Content Include="scripts\Missile.aspx" />
+    <Content Include="scripts\MobilizingStatus.aspx" />
+    <Content Include="scripts\MostKills.aspx" />
+    <Content Include="scripts\Msg.aspx" />
+    <Content Include="scripts\MySector.aspx" />
+    <Content Include="scripts\Nav.htm" />
+    <Content Include="scripts\News.aspx" />
+    <Content Include="scripts\Politics.aspx" />
+    <Content Include="scripts\PostError.aspx" />
+    <Content Include="scripts\PostErrorB.aspx" />
+    <Content Include="scripts\Preferences.aspx" />
+    <Content Include="scripts\Probe.aspx" />
+    <Content Include="scripts\Profile.aspx" />
+    <Content Include="scripts\ProfileEdit.aspx" />
+    <Content Include="scripts\Raze.aspx" />
+    <Content Include="scripts\Reply.aspx" />
+    <Content Include="scripts\Research.aspx" />
+    <Content Include="scripts\Rewards.aspx" />
+    <Content Include="scripts\RightFrame.aspx" />
+    <Content Include="scripts\Scores.aspx" />
+    <Content Include="scripts\SectorChooser.ascx" />
+    <Content Include="scripts\SendAid.aspx" />
+    <Content Include="scripts\SendMessages.aspx" />
+    <Content Include="scripts\Sent.aspx" />
+    <Content Include="scripts\Shields.aspx" />
+    <Content Include="scripts\smile.gif" />
+    <Content Include="scripts\SOB.ascx" />
+    <Content Include="scripts\SOK.ascx" />
+    <Content Include="scripts\SOM.ascx" />
+    <Content Include="scripts\SOR.ascx" />
+    <Content Include="scripts\Status.aspx" />
+    <Content Include="scripts\StrongestAlliances.aspx" />
+    <Content Include="scripts\StrongestSectors.aspx" />
+    <Content Include="scripts\TopInfoBar.ascx" />
+    <Content Include="scripts\UniversalForums.aspx" />
+    <Content Include="scripts\UniversalForumsThread.aspx" />
+    <Content Include="scripts\UniversalNews.aspx" />
+    <Content Include="scripts\UniverseLand.aspx" />
+    <Content Include="scripts\UniverseNetworth.aspx" />
+    <Content Include="scripts\unlocked_icon.gif" />
+    <Content Include="scripts\Vacation.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="SignUpGroup.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\Delete.aspx.designer.vb">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Delete.aspx.vb">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Disable.aspx.designer.vb">
+      <DependentUpon>Disable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Disable.aspx.vb">
+      <DependentUpon>Disable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ErrorLog.aspx.designer.vb">
+      <DependentUpon>ErrorLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ErrorLog.aspx.vb">
+      <DependentUpon>ErrorLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\LogIn.aspx.designer.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\LogIn.aspx.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Modify.aspx.designer.vb">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Modify.aspx.vb">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\MultiScans.aspx.designer.vb">
+      <DependentUpon>MultiScans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\MultiScans.aspx.vb">
+      <DependentUpon>MultiScans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Query.aspx.designer.vb">
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Query.aspx.vb">
+      <DependentUpon>Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Tick.aspx.designer.vb">
+      <DependentUpon>Tick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Tick.aspx.vb">
+      <DependentUpon>Tick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\SKlone.vb" />
+    <Compile Include="Help.aspx.designer.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="scripts\Activate.aspx.designer.vb">
+      <DependentUpon>Activate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Activate.aspx.vb">
+      <DependentUpon>Activate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AggressiveProbings.aspx.designer.vb">
+      <DependentUpon>AggressiveProbings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AggressiveProbings.aspx.vb">
+      <DependentUpon>AggressiveProbings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceChooser.ascx.designer.vb">
+      <DependentUpon>AllianceChooser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceChooser.ascx.vb">
+      <DependentUpon>AllianceChooser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Alliancecontrol.aspx.designer.vb">
+      <DependentUpon>Alliancecontrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Alliancecontrol.aspx.vb">
+      <DependentUpon>Alliancecontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceForums.aspx.designer.vb">
+      <DependentUpon>AllianceForums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceForums.aspx.vb">
+      <DependentUpon>AllianceForums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceForumsThread.aspx.designer.vb">
+      <DependentUpon>AllianceForumsThread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceForumsThread.aspx.vb">
+      <DependentUpon>AllianceForumsThread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceInfo.aspx.designer.vb">
+      <DependentUpon>AllianceInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceInfo.aspx.vb">
+      <DependentUpon>AllianceInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceNews.aspx.designer.vb">
+      <DependentUpon>AllianceNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceNews.aspx.vb">
+      <DependentUpon>AllianceNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Alliances.aspx.designer.vb">
+      <DependentUpon>Alliances.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Alliances.aspx.vb">
+      <DependentUpon>Alliances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\AllianceSectors.aspx.designer.vb">
+      <DependentUpon>AllianceSectors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\AllianceSectors.aspx.vb">
+      <DependentUpon>AllianceSectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Attack.aspx.designer.vb">
+      <DependentUpon>Attack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Attack.aspx.vb">
+      <DependentUpon>Attack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\BottomInfoBar.ascx.designer.vb">
+      <DependentUpon>BottomInfoBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\BottomInfoBar.ascx.vb">
+      <DependentUpon>BottomInfoBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Buildings.aspx.designer.vb">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Buildings.aspx.vb">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\CalcB.aspx.designer.vb">
+      <DependentUpon>CalcB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\CalcB.aspx.vb">
+      <DependentUpon>CalcB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\ConstructionStatus.ascx.designer.vb">
+      <DependentUpon>ConstructionStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\ConstructionStatus.ascx.vb">
+      <DependentUpon>ConstructionStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\ConstructionStatus.aspx.designer.vb">
+      <DependentUpon>ConstructionStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\ConstructionStatus.aspx.vb">
+      <DependentUpon>ConstructionStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Dead.aspx.designer.vb">
+      <DependentUpon>Dead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Dead.aspx.vb">
+      <DependentUpon>Dead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Delete.aspx.designer.vb">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Delete.aspx.vb">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Disband.aspx.designer.vb">
+      <DependentUpon>Disband.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Disband.aspx.vb">
+      <DependentUpon>Disband.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Explore.aspx.designer.vb">
+      <DependentUpon>Explore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Explore.aspx.vb">
+      <DependentUpon>Explore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Forums.aspx.designer.vb">
+      <DependentUpon>Forums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Forums.aspx.vb">
+      <DependentUpon>Forums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\ForumsThread.aspx.designer.vb">
+      <DependentUpon>ForumsThread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\ForumsThread.aspx.vb">
+      <DependentUpon>ForumsThread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\GalaxyLand.aspx.designer.vb">
+      <DependentUpon>GalaxyLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\GalaxyLand.aspx.vb">
+      <DependentUpon>GalaxyLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\GalaxyNetworth.aspx.designer.vb">
+      <DependentUpon>GalaxyNetworth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\GalaxyNetworth.aspx.vb">
+      <DependentUpon>GalaxyNetworth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\KingdomChooser.ascx.designer.vb">
+      <DependentUpon>KingdomChooser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\KingdomChooser.ascx.vb">
+      <DependentUpon>KingdomChooser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\LargestLandGrab.aspx.designer.vb">
+      <DependentUpon>LargestLandGrab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\LargestLandGrab.aspx.vb">
+      <DependentUpon>LargestLandGrab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\LogIn.aspx.designer.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\LogIn.aspx.vb">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\LogOut.aspx.designer.vb">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\LogOut.aspx.vb">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Military.aspx.designer.vb">
+      <DependentUpon>Military.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Military.aspx.vb">
+      <DependentUpon>Military.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\MilitaryStatus.aspx.designer.vb">
+      <DependentUpon>MilitaryStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\MilitaryStatus.aspx.vb">
+      <DependentUpon>MilitaryStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Missile.aspx.designer.vb">
+      <DependentUpon>Missile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Missile.aspx.vb">
+      <DependentUpon>Missile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\MobilizingStatus.aspx.designer.vb">
+      <DependentUpon>MobilizingStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\MobilizingStatus.aspx.vb">
+      <DependentUpon>MobilizingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\MostKills.aspx.designer.vb">
+      <DependentUpon>MostKills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\MostKills.aspx.vb">
+      <DependentUpon>MostKills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Msg.aspx.designer.vb">
+      <DependentUpon>Msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Msg.aspx.vb">
+      <DependentUpon>Msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\MySector.aspx.designer.vb">
+      <DependentUpon>MySector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\MySector.aspx.vb">
+      <DependentUpon>MySector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\News.aspx.designer.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\News.aspx.vb">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Politics.aspx.designer.vb">
+      <DependentUpon>Politics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Politics.aspx.vb">
+      <DependentUpon>Politics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\PostError.aspx.designer.vb">
+      <DependentUpon>PostError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\PostError.aspx.vb">
+      <DependentUpon>PostError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\PostErrorB.aspx.designer.vb">
+      <DependentUpon>PostErrorB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\PostErrorB.aspx.vb">
+      <DependentUpon>PostErrorB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Preferences.aspx.designer.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Preferences.aspx.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Probe.aspx.designer.vb">
+      <DependentUpon>Probe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Probe.aspx.vb">
+      <DependentUpon>Probe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Profile.aspx.designer.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\ProfileEdit.aspx.designer.vb">
+      <DependentUpon>ProfileEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\ProfileEdit.aspx.vb">
+      <DependentUpon>ProfileEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Raze.aspx.designer.vb">
+      <DependentUpon>Raze.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Raze.aspx.vb">
+      <DependentUpon>Raze.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Reply.aspx.designer.vb">
+      <DependentUpon>Reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Reply.aspx.vb">
+      <DependentUpon>Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Research.aspx.designer.vb">
+      <DependentUpon>Research.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Research.aspx.vb">
+      <DependentUpon>Research.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Rewards.aspx.designer.vb">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Rewards.aspx.vb">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\RightFrame.aspx.designer.vb">
+      <DependentUpon>RightFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\RightFrame.aspx.vb">
+      <DependentUpon>RightFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Scores.aspx.designer.vb">
+      <DependentUpon>Scores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Scores.aspx.vb">
+      <DependentUpon>Scores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SectorChooser.ascx.designer.vb">
+      <DependentUpon>SectorChooser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SectorChooser.ascx.vb">
+      <DependentUpon>SectorChooser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SendAid.aspx.designer.vb">
+      <DependentUpon>SendAid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SendAid.aspx.vb">
+      <DependentUpon>SendAid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SendMessages.aspx.designer.vb">
+      <DependentUpon>SendMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SendMessages.aspx.vb">
+      <DependentUpon>SendMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Sent.aspx.designer.vb">
+      <DependentUpon>Sent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Sent.aspx.vb">
+      <DependentUpon>Sent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Shields.aspx.designer.vb">
+      <DependentUpon>Shields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Shields.aspx.vb">
+      <DependentUpon>Shields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SOB.ascx.designer.vb">
+      <DependentUpon>SOB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SOB.ascx.vb">
+      <DependentUpon>SOB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SOK.ascx.designer.vb">
+      <DependentUpon>SOK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SOK.ascx.vb">
+      <DependentUpon>SOK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SOM.ascx.designer.vb">
+      <DependentUpon>SOM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SOM.ascx.vb">
+      <DependentUpon>SOM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SOR.ascx.designer.vb">
+      <DependentUpon>SOR.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SOR.ascx.vb">
+      <DependentUpon>SOR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Status.aspx.designer.vb">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Status.aspx.vb">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\StrongestAlliances.aspx.designer.vb">
+      <DependentUpon>StrongestAlliances.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\StrongestAlliances.aspx.vb">
+      <DependentUpon>StrongestAlliances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\StrongestSectors.aspx.designer.vb">
+      <DependentUpon>StrongestSectors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\StrongestSectors.aspx.vb">
+      <DependentUpon>StrongestSectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\TopInfoBar.ascx.designer.vb">
+      <DependentUpon>TopInfoBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\TopInfoBar.ascx.vb">
+      <DependentUpon>TopInfoBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\UniversalForums.aspx.designer.vb">
+      <DependentUpon>UniversalForums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\UniversalForums.aspx.vb">
+      <DependentUpon>UniversalForums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\UniversalForumsThread.aspx.designer.vb">
+      <DependentUpon>UniversalForumsThread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\UniversalForumsThread.aspx.vb">
+      <DependentUpon>UniversalForumsThread.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\UniversalNews.aspx.designer.vb">
+      <DependentUpon>UniversalNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\UniversalNews.aspx.vb">
+      <DependentUpon>UniversalNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\UniverseLand.aspx.designer.vb">
+      <DependentUpon>UniverseLand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\UniverseLand.aspx.vb">
+      <DependentUpon>UniverseLand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\UniverseNetworth.aspx.designer.vb">
+      <DependentUpon>UniverseNetworth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\UniverseNetworth.aspx.vb">
+      <DependentUpon>UniverseNetworth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\Vacation.aspx.designer.vb">
+      <DependentUpon>Vacation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\Vacation.aspx.vb">
+      <DependentUpon>Vacation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpGroup.aspx.designer.vb">
+      <DependentUpon>SignUpGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpGroup.aspx.vb">
+      <DependentUpon>SignUpGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin\Delete.aspx.resx">
+      <DependentUpon>Delete.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Disable.aspx.resx">
+      <DependentUpon>Disable.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\ErrorLog.aspx.resx">
+      <DependentUpon>ErrorLog.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\LogIn.aspx.resx">
+      <DependentUpon>LogIn.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Modify.aspx.resx">
+      <DependentUpon>Modify.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\MultiScans.aspx.resx">
+      <DependentUpon>MultiScans.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Query.aspx.resx">
+      <DependentUpon>Query.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Tick.aspx.resx">
+      <DependentUpon>Tick.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.aspx.resx">
+      <DependentUpon>Default.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.aspx.resx">
+      <DependentUpon>Help.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.aspx.resx">
+      <DependentUpon>LogIn.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Activate.aspx.resx">
+      <DependentUpon>Activate.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AggressiveProbings.aspx.resx">
+      <DependentUpon>AggressiveProbings.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceChooser.ascx.resx">
+      <DependentUpon>AllianceChooser.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Alliancecontrol.aspx.resx">
+      <DependentUpon>Alliancecontrol.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceForums.aspx.resx">
+      <DependentUpon>AllianceForums.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceForumsThread.aspx.resx">
+      <DependentUpon>AllianceForumsThread.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceInfo.aspx.resx">
+      <DependentUpon>AllianceInfo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceNews.aspx.resx">
+      <DependentUpon>AllianceNews.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Alliances.aspx.resx">
+      <DependentUpon>Alliances.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\AllianceSectors.aspx.resx">
+      <DependentUpon>AllianceSectors.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Attack.aspx.resx">
+      <DependentUpon>Attack.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\BottomInfoBar.ascx.resx">
+      <DependentUpon>BottomInfoBar.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Buildings.aspx.resx">
+      <DependentUpon>Buildings.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\CalcB.aspx.resx">
+      <DependentUpon>CalcB.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\ConstructionStatus.ascx.resx">
+      <DependentUpon>ConstructionStatus.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\ConstructionStatus.aspx.resx">
+      <DependentUpon>ConstructionStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Dead.aspx.resx">
+      <DependentUpon>Dead.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Delete.aspx.resx">
+      <DependentUpon>Delete.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Disband.aspx.resx">
+      <DependentUpon>Disband.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Explore.aspx.resx">
+      <DependentUpon>Explore.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Forums.aspx.resx">
+      <DependentUpon>Forums.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\ForumsThread.aspx.resx">
+      <DependentUpon>ForumsThread.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\GalaxyLand.aspx.resx">
+      <DependentUpon>GalaxyLand.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\GalaxyNetworth.aspx.resx">
+      <DependentUpon>GalaxyNetworth.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\KingdomChooser.ascx.resx">
+      <DependentUpon>KingdomChooser.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\LargestLandGrab.aspx.resx">
+      <DependentUpon>LargestLandGrab.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\LogIn.aspx.resx">
+      <DependentUpon>LogIn.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\LogOut.aspx.resx">
+      <DependentUpon>LogOut.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Military.aspx.resx">
+      <DependentUpon>Military.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\MilitaryStatus.aspx.resx">
+      <DependentUpon>MilitaryStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Missile.aspx.resx">
+      <DependentUpon>Missile.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\MobilizingStatus.aspx.resx">
+      <DependentUpon>MobilizingStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\MostKills.aspx.resx">
+      <DependentUpon>MostKills.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Msg.aspx.resx">
+      <DependentUpon>Msg.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\MySector.aspx.resx">
+      <DependentUpon>MySector.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\News.aspx.resx">
+      <DependentUpon>News.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Politics.aspx.resx">
+      <DependentUpon>Politics.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\PostError.aspx.resx">
+      <DependentUpon>PostError.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\PostErrorB.aspx.resx">
+      <DependentUpon>PostErrorB.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Preferences.aspx.resx">
+      <DependentUpon>Preferences.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Probe.aspx.resx">
+      <DependentUpon>Probe.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Profile.aspx.resx">
+      <DependentUpon>Profile.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\ProfileEdit.aspx.resx">
+      <DependentUpon>ProfileEdit.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Raze.aspx.resx">
+      <DependentUpon>Raze.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Reply.aspx.resx">
+      <DependentUpon>Reply.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Research.aspx.resx">
+      <DependentUpon>Research.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Rewards.aspx.resx">
+      <DependentUpon>Rewards.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\RightFrame.aspx.resx">
+      <DependentUpon>RightFrame.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Scores.aspx.resx">
+      <DependentUpon>Scores.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SectorChooser.ascx.resx">
+      <DependentUpon>SectorChooser.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SendAid.aspx.resx">
+      <DependentUpon>SendAid.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SendMessages.aspx.resx">
+      <DependentUpon>SendMessages.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Sent.aspx.resx">
+      <DependentUpon>Sent.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Shields.aspx.resx">
+      <DependentUpon>Shields.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SOB.ascx.resx">
+      <DependentUpon>SOB.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SOK.ascx.resx">
+      <DependentUpon>SOK.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SOM.ascx.resx">
+      <DependentUpon>SOM.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\SOR.ascx.resx">
+      <DependentUpon>SOR.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Status.aspx.resx">
+      <DependentUpon>Status.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\StrongestAlliances.aspx.resx">
+      <DependentUpon>StrongestAlliances.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\StrongestSectors.aspx.resx">
+      <DependentUpon>StrongestSectors.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\TopInfoBar.ascx.resx">
+      <DependentUpon>TopInfoBar.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\UniversalForums.aspx.resx">
+      <DependentUpon>UniversalForums.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\UniversalForumsThread.aspx.resx">
+      <DependentUpon>UniversalForumsThread.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\UniversalNews.aspx.resx">
+      <DependentUpon>UniversalNews.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\UniverseLand.aspx.resx">
+      <DependentUpon>UniverseLand.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\UniverseNetworth.aspx.resx">
+      <DependentUpon>UniverseNetworth.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scripts\Vacation.aspx.resx">
+      <DependentUpon>Vacation.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.aspx.resx">
+      <DependentUpon>SignUp.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpGroup.aspx.resx">
+      <DependentUpon>SignUpGroup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\decorations\Thumbs.db" />
+    <Content Include="images\emoticons\Thumbs.db" />
+    <Content Include="images\forums\Thumbs.db" />
+    <Content Include="images\work\moon2.psp" />
+    <Content Include="images\work\nebula1.psp" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64576</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64576/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,908 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{d34abd23-225c-4b63-9bf6-97fff452a015}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables\" />
+    <Folder Include="Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\AllianceForumsPosts.sql" />
+    <Build Include="Tables\AllianceForumsThreads.sql" />
+    <Build Include="Tables\AllianceNAPs.sql" />
+    <Build Include="Tables\AllianceNews.sql" />
+    <Build Include="Tables\AllianceRelationTypes.sql" />
+    <Build Include="Tables\Alliances.sql" />
+    <Build Include="Tables\Bans.sql" />
+    <Build Include="Tables\Buildings.sql" />
+    <Build Include="Tables\ErrorLog.sql" />
+    <Build Include="Tables\FailedLogins.sql" />
+    <Build Include="Tables\Kingdoms.sql" />
+    <Build Include="Tables\Land.sql" />
+    <Build Include="Tables\LogIns.sql" />
+    <Build Include="Tables\Messages.sql" />
+    <Build Include="Tables\Missiles.sql" />
+    <Build Include="Tables\PersonalNews.sql" />
+    <Build Include="Tables\PlanetTypes.sql" />
+    <Build Include="Tables\Profiles.sql" />
+    <Build Include="Tables\PublicForumsPosts.sql" />
+    <Build Include="Tables\PublicForumsThreads.sql" />
+    <Build Include="Tables\Publics.sql" />
+    <Build Include="Tables\RaceTypes.sql" />
+    <Build Include="Tables\Research.sql" />
+    <Build Include="Tables\Rewards.sql" />
+    <Build Include="Tables\Scores.sql" />
+    <Build Include="Tables\SectorForumsPosts.sql" />
+    <Build Include="Tables\SectorForumsThreads.sql" />
+    <Build Include="Tables\SectorNews.sql" />
+    <Build Include="Tables\Sectors.sql" />
+    <Build Include="Tables\ServerStatus.sql" />
+    <Build Include="Tables\Shields.sql" />
+    <Build Include="Tables\SignupIPs.sql" />
+    <Build Include="Tables\SKloneChat.sql" />
+    <Build Include="Tables\Ticker.sql" />
+    <Build Include="Tables\UnitPowerCost.sql" />
+    <Build Include="Tables\UnitsOut.sql" />
+    <Build Include="Tables\UnitsTraining.sql" />
+    <Build Include="Tables\UniversalNews.sql" />
+    <Build Include="Tables\WLs.sql" />
+    <Build Include="Tables\AccountIPs.sql" />
+    <Build Include="Tables\Accounts.sql" />
+    <Build Include="Tables\AccountStatus.sql" />
+    <Build Include="Tables\Activation.sql" />
+    <Build Include="Tables\AdminForumPosts.sql" />
+    <Build Include="Tables\AdminForums.sql" />
+    <Build Include="Tables\AdminForumThreads.sql" />
+    <Build Include="Tables\AdminLog.sql" />
+    <Build Include="Tables\AdminLogins.sql" />
+    <Build Include="Tables\Admins.sql" />
+    <Build Include="Tables\AllianceAllies.sql" />
+    <Build Include="Views\MultiScanner1.sql" />
+    <Build Include="Functions\MoneyAid.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\MoneyGain.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\MoneyGainB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\NewPower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\NuclearLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PercentResearched.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PlanetType.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\PlanetTypeName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PopulationAid.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PopulationGain.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\PowerAid.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PowerLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\PublicID.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadAlliance.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadCreator.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadLastPostDate.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadLastPoster.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadPosts.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PublicThreadViews.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\RaceType.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\RaceTypeName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\ResLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\RulerNameL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\ScientistsOnJob.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorCount.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SectorLastPoster.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SectorsAllianceNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorThreadCreator.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SectorThreadLastPostDate.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorThreadLastPoster.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SectorThreadPosts.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorThreadSector.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SectorThreadViews.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Similarities.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\Similarities2.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Similarities3.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Similarities4.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Similarities5.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SoldiersHome.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SoldiersTraining.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\TFsHome.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Training.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\UnderConstruction.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitResearched.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitsOutPerWL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Votes.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\VotesB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\WLReturnTime.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\AllianceLink.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\AllianceNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcAttackPower.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcResearchPercent.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcReturnTime.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\Explorable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FreeLand.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameA.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameD.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameE.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameG.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameH.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomStatus.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullSectorName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullSectorNameB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FullSectorNameC.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FullSirName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\IsSL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\LandGain.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\PopulationChange.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\PowerNeeded.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\RelationType.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\ScientistsAvailable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\SectorMemberColour.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\SoldiersTrainable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitCostFactor.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\UnitCostFactorB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitsHome.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\CalcDefencePower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceAverageNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\Scouter.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\BuildingName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\UnitCost.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\BuildingOrder.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\UnitsTrainable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FormatNumber.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitOrder.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\UnitOrderB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\AdminForumThread.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\AllianceID.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\AllianceRelation.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceRelationB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceSectorNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceSectors.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadAlliance.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadCreator.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadLastPostDate.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadLastPoster.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadPosts.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\AllianceThreadViews.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\Buildable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\BuildCost.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\BuildingPercent.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcAttackPowerB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcDefencePowerB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcNetworth.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcProbeAttackPower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\CalcProbeDefencePower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\CalcProbingDefencePower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\Disbandable.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\EnergyLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\ExploreCost.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\Exploring.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FamilyName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FamilyType.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullAllianceSectorName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FullKingdomNameC.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameF.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FullKingdomNameI.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FullKingdomNameJ.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\FullSectorNameD.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\FusionLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\GetAAL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\GetAALB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\GetAL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\GetALB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\GetSL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\IncomeFactor.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\IncomeFactor2.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\IsDead.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\KingdomCount.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\KingdomLand.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\KingdomMoney.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Functions\KingdomNameL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\KingdomSectorL.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Functions\LoggedIn.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\BootSector.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\BuildEnergy.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\BuildFusion.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\BuildingLoss.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\BuildingLossB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\BuildingLossC.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\BuildingLossD.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\BuildNuclear.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\BuyStuff.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\CancelAlly.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CancelNap.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CancelPeace.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CancelWar.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CleanUp.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\DeclareAlly.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DeclareNap.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DeclarePeace.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DeclareWar.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\deletealliance.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\DeleteKingdom.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DeleteKingdomB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DeletePending.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\DisableKingdom.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\Disband.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\EnableKingdom.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\JoinAlliance.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\kingdomIDs.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\LogIn.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\MakeAlliance.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Missile.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\ProbeArson.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbeArsonB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbePop.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbePopB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbePower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbePowerB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbeRob.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbeRobB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Probing.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ProbingB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ResetAll.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\ResetAllB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ResetAllC.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\ResetDelete.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ResetKD.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\ResetKDB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\ReturnSoldiers.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\RewardLand.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\RewardMoney.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\SendAid.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\SendMessage.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\SetWLOut.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\UpdateAvatar.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\UpdateHelper.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\UpdateKingdomName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\UpdateKingdomPassword.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\UpdateKingdomRuler.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\UpdateKingdomsRulerName.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\UpdateKingdomUser.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\UpdateSkloneAccounts.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\UsePower.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\BackupTick.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Build.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CreateFarms.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CreateKingdom.sql" />
+    <Build Include="Stored Procedures\CreateKingdomB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Explore.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\MissileEnergy.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\MissileFusion.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\MissileNuclear.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\Raze.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\SendUnitsOut.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Tick.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\Train.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\UpdateAllianceRank.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Attack.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\Attack2.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\AttackB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\TickB.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\CalcAttack.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\updatenuke.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\AccessControl.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\Activate.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Stored Procedures\AdminLogIn.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Stored Procedures\AllianceSectorsList.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+  </ItemGroup>
+</Project>

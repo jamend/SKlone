@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[AccountStatus] (
+    [kdID]            INT           NOT NULL,
+    [LoggedIn]        TINYINT       CONSTRAINT [DF_AccountStatus_LoggedIn] DEFAULT (0) NOT NULL,
+    [Dead]            BIT           CONSTRAINT [DF_AccountStatus_Dead] DEFAULT (0) NOT NULL,
+    [DieDate]         DATETIME      NULL,
+    [Cheater]         BIT           CONSTRAINT [DF_AccountStatus_Cheater] DEFAULT (0) NOT NULL,
+    [Vacation]        BIT           CONSTRAINT [DF_AccountStatus_Vacation] DEFAULT (0) NOT NULL,
+    [VacationMode]    INT           CONSTRAINT [DF_AccountStatus_VacationMode] DEFAULT (0) NULL,
+    [VacationStart]   INT           CONSTRAINT [DF_AccountStatus_VacationStart] DEFAULT (0) NULL,
+    [VacationPending] BIT           CONSTRAINT [DF_AccountStatus_VacationPending] DEFAULT (0) NOT NULL,
+    [VacationEnd]     INT           CONSTRAINT [DF_AccountStatus_VacationEnd] DEFAULT (0) NULL,
+    [DeleteDate]      INT           NULL,
+    [DeletePending]   BIT           CONSTRAINT [DF_AccountStatus_DeletePending] DEFAULT (0) NOT NULL,
+    [Newbie]          BIT           CONSTRAINT [DF_AccountStatus_Newbie] DEFAULT (1) NOT NULL,
+    [Inactive]        TINYINT       CONSTRAINT [DF_AccountStatus_Inactive] DEFAULT (0) NOT NULL,
+    [MessagesSent]    TINYINT       CONSTRAINT [DF_AccountStatus_MessagesSent] DEFAULT (0) NOT NULL,
+    [LastGalaxy]      TINYINT       CONSTRAINT [DF_AccountStatus_LastGalaxy] DEFAULT (1) NULL,
+    [LastSector]      TINYINT       CONSTRAINT [DF_AccountStatus_LastSector] DEFAULT (1) NULL,
+    [NewbieHours]     INT           CONSTRAINT [DF_AccountStatus_NewbieHours] DEFAULT (96) NOT NULL,
+    [KingdomName]     NVARCHAR (50) NULL,
+    [RulerName]       NVARCHAR (50) NULL,
+    [GalaxySector]    NVARCHAR (50) NULL,
+    [Invisible]       TINYINT       CONSTRAINT [DF_AccountStatus_Invisible] DEFAULT (0) NULL,
+    CONSTRAINT [PK_AccountStatus] PRIMARY KEY CLUSTERED ([kdID] ASC)
+);
+
