@@ -80,7 +80,10 @@ Partial Class MySector
                 SectorID = SqlData1.GetInt32(0)
                 pnlSector.Visible = True
                 lblError.Text = ""
-                Dim SL As Int32 = SqlData1.GetInt32(1)
+                Dim SL As Int32 = 0
+                If Not SqlData1.IsDBNull(1) Then
+                    SL = SqlData1.GetInt32(1)
+                End If
                 If SqlData1.IsDBNull(2) Then
                     lblNetworth.Text = "0"
                 Else
