@@ -126,8 +126,8 @@
 	/*delete kingdoms*/
 	UPDATE AccountStatus SET DeleteDate = 1 WHERE LoggedIn = 1 AND Dead = 1
 	UPDATE AccountStatus SET DeleteDate = 1 WHERE DeleteDate <= 0
-	UPDATE AccountStatus SET DeleteDate = 12 WHERE Dead = 1 AND DeleteDate = NULL
-	UPDATE AccountStatus SET DeleteDate = 12 WHERE DeletePending = 1 AND DeleteDate = NULL
+	UPDATE AccountStatus SET DeleteDate = 12 WHERE Dead = 1 AND DeleteDate IS NULL
+	UPDATE AccountStatus SET DeleteDate = 12 WHERE DeletePending = 1 AND DeleteDate IS NULL
 	UPDATE AccountStatus SET DeleteDate = DeleteDate - 1 WHERE Dead = 1
 	UPDATE AccountStatus SET DeleteDate = DeleteDate - 1 WHERE DeletePending = 1
 	EXEC dbo.cleanup

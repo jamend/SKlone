@@ -14,27 +14,27 @@ BEGIN
 	SET @Allie = (SELECT Allie FROM Alliances WHERE AllianceID = @AllianceID)
 	SET @Nap = (SELECT Nap FROM Alliances WHERE AllianceID = @AllianceID)
 	SET @Peace = (SELECT Peace FROM Alliances WHERE AllianceID = @AllianceID)
-	IF @War != NULL
+	IF @War IS NOT NULL
 	BEGIN
 		SET @Name = '' + dbo.AllianceName(@AllianceID) + ' (WAR)'
 	END
 	ELSE
-	IF @Peace != NULL
+	IF @Peace IS NOT NULL
 	BEGIN
 		SET @Name = '' + dbo.AllianceName(@AllianceID) + ' (PEACE)'
 	END
 	ELSE
-	IF @Nap != NULL
+	IF @Nap IS NOT NULL
 	BEGIN
 		SET @Name = '' + dbo.AllianceName(@AllianceID) + ' (NAP)'
 	END
 	ELSE
-	IF @Allie != NULL
+	IF @Allie IS NOT NULL
 	BEGIN
 		SET @Name = '' + dbo.AllianceName(@AllianceID) + ' (ALLY)'
 	END
 	ELSE
-	IF @Allie = NULL AND @Nap = NULL AND @War = NULL AND @Peace = NULL
+	IF @Allie IS NULL AND @Nap IS NULL AND @War IS NULL AND @Peace IS NULL
 	BEGIN
 		SET @Name = ' + dbo.AllianceName(@AllianceID) + '
 	END

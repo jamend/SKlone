@@ -10,7 +10,7 @@ BEGIN
 	SET @Name = (SELECT [Name] FROM Kingdoms WHERE kdID = @kdID)
 	SET @PublicID = dbo.PublicID((SELECT SectorID FROM Kingdoms WHERE kdID = @kdID))
 	BEGIN
-	IF @Name = Null
+	IF @Name IS NULL
 	BEGIN
 		SET @Name = 'Nobody'
 	END

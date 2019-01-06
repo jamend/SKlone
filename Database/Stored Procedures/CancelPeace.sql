@@ -14,7 +14,7 @@ AS
 		SET @AllianceName = (SELECT AllianceName FROM Alliances WHERE AllianceID = (SELECT Peace FROM Alliances WHERE AL = @kdID))
 		SET @AllianceNameAL = (SELECT AllianceName FROM Alliances WHERE AL = @kdID)
 		SET @UniversalNews = 'The <b>' + @AllianceNameAL + '</b> alliance has canceled their <b>peace</b> status with the <b>' + @AllianceName + '</b> alliance.'
-		IF (SELECT Peace FROM Alliances WHERE AL = @kdID) = NULL
+		IF (SELECT Peace FROM Alliances WHERE AL = @kdID) IS NULL
 		BEGIN
 			SET @Result = 'You did not have a peace status with anyone.'
 		END

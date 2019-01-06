@@ -129,7 +129,7 @@ AS
 			END
 		END
 END
-IF @Success = NULL
+IF @Success IS NULL
 		BEGIN
 		SET @Success = 'Failed'
 		END

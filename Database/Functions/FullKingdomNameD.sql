@@ -7,7 +7,7 @@ RETURNS nvarchar(100)
 BEGIN
 	DECLARE @Name nvarchar(100)
 	SET @Name = (SELECT [Name] FROM Kingdoms WHERE kdID = @kdID)
-	IF @Name = Null
+	IF @Name IS NULL
 	BEGIN
 		SET @Name = 'Nobody'
 	END

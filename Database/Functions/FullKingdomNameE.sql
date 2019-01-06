@@ -9,7 +9,7 @@ BEGIN
 	DECLARE @AllianceID int
 	SET @Name = (SELECT [Name] FROM Kingdoms WHERE kdID = @kdID)
 	SET @AllianceID = dbo.AllianceID((SELECT SectorID FROM Kingdoms WHERE kdID = @kdID))
-	IF @Name = Null
+	IF @Name IS NULL
 	BEGIN
 		SET @Name = 'Nobody'
 	END

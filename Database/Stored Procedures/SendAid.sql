@@ -63,19 +63,19 @@ AS
 					END
 					ELSE
 					BEGIN
-						IF @Money = NULL
+						IF @Money IS NULL
 						BEGIN 
 							SET @Money = 0
 						END
-						IF @Power = NULL
+						IF @Power IS NULL
 						BEGIN 
 							SET @Power = 0
 						END
-						IF @Population = NULL
+						IF @Population IS NULL
 						BEGIN 
 							SET @Population = 0
 						END
-						IF @Soldiers = NULL
+						IF @Soldiers IS NULL
 						BEGIN 
 							SET @Soldiers = 0
 						END

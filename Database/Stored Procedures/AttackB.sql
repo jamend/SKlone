@@ -143,39 +143,39 @@ AS
 						SET @SabresLostB = @DefenderLoss * dbo.UnitsHome(@Defender, 10)
 						SET @LancersLostA = @Lancers * 0.08
 						SET @LancersLostB = @DefenderLoss * dbo.UnitsHome(@Defender, 11)
-						IF @SoldiersLostB = NULL 
+						IF @SoldiersLostB IS NULL
 						BEGIN
 							SET @SoldiersLostB = 0
 						END
-						IF @LTroopersLostB = NULL 
+						IF @LTroopersLostB IS NULL
 						BEGIN
 							SET @LTroopersLostB = 0
 						END
-						IF @LDragoonsLostB = NULL 
+						IF @LDragoonsLostB IS NULL
 						BEGIN
 							SET @LDragoonsLostB = 0
 						END
-						IF @TanksLostB = NULL 
+						IF @TanksLostB IS NULL
 						BEGIN
 							SET @TanksLostB = 0
 						END
-						IF @TFsLostB = NULL 
+						IF @TFsLostB IS NULL
 						BEGIN
 							SET @TFsLostB = 0
 						END
-						IF @SpecialOpsLostB = NULL 
+						IF @SpecialOpsLostB IS NULL
 						BEGIN
 							SET @SpecialOpsLostB = 0
 						END
-						IF @InterceptorsLostB = NULL 
+						IF @InterceptorsLostB IS NULL
 						BEGIN
 							SET @InterceptorsLostB = 0
 						END
-						IF @SabresLostB = NULL 
+						IF @SabresLostB IS NULL
 						BEGIN
 							SET @SabresLostB = 0
 						END
-						IF @LancersLostB = NULL 
+						IF @LancersLostB IS NULL
 						BEGIN
 							SET @LancersLostB = 0
 						END

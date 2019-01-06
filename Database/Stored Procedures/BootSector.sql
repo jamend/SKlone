@@ -8,7 +8,7 @@ CREATE PROCEDURE dbo.BootSector
 AS
 		DECLARE @Sector nvarchar(16)
 		SET @Sector = (SELECT SectorID FROM Sectors WHERE SectorID = @SectorID)
-		IF @SectorID = NULL
+		IF @SectorID IS NULL
 		BEGIN
 			SET @Result = 'You did not give complete orders.'
 		END

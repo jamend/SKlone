@@ -82,7 +82,7 @@ BEGIN
 			IF @Percent > 100 SET @Percent = 100
 		END
 	END
-	IF @Percent = NULL
+	IF @Percent IS NULL
 	BEGIN
 	SET @Percent = 0
 	END

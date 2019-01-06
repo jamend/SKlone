@@ -11,7 +11,7 @@ AS
 		DECLARE @Alliance int
 		SET @AllianceAL = (SELECT AL FROM Alliances WHERE AL = @kdID)
 		SET @Alliance = (SELECT AL FROM Alliances WHERE AllianceName = @AllianceName)
-		IF @AllianceAL = NULL OR @Alliance = NULL
+		IF @AllianceAL IS NULL OR @Alliance IS NULL
 		BEGIN
 			SET @Result = 'You are not AL of an alliance.'
 			SET @Success = 'Failed'

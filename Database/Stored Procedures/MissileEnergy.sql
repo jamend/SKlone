@@ -82,7 +82,7 @@ AS
 						IF @AttackerSector = @DefenderSector
 						BEGIN
 							INSERT INTO SectorNews(SectorID, NewsType, NewsText) VALUES(@AttackerSector, 5, @AttackerSectorNews)
-							IF @AttackerAlliance != NULL INSERT INTO AllianceNews(AllianceID, NewsType, NewsText) VALUES(@AttackerAlliance, 5, @AttackerSectorNews)
+							IF @AttackerAlliance IS NOT NULL INSERT INTO AllianceNews(AllianceID, NewsType, NewsText) VALUES(@AttackerAlliance, 5, @AttackerSectorNews)
 						END
 						ELSE
 						BEGIN

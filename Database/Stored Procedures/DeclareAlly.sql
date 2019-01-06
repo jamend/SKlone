@@ -18,7 +18,7 @@ AS
 		SET @UniversalNews = 'The <b>' + @AllianceNameAL + '</b> alliance has signed an <b>ally</b> treaty with the <b>' + @AllianceName + '</b> alliance.'
 		DECLARE @WarStatus nvarchar(16)
 		SET @WarStatus = (SELECT WarStatus FROM Alliances WHERE AL = @kdID)
-		IF @AllianceID = NULL
+		IF @AllianceID IS NULL
 		BEGIN
 			SET @Result = 'You did not give complete orders.'
 		END

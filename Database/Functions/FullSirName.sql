@@ -9,7 +9,7 @@ BEGIN
 	DECLARE @PublicID int
 	SET @Name = (SELECT RulerName FROM Kingdoms WHERE kdID = @kdID)
 	SET @PublicID = dbo.PublicID((SELECT SectorID FROM Kingdoms WHERE kdID = @kdID))
-	IF @Name = Null
+	IF @Name IS NULL
 	BEGIN
 		SET @Name = 'Nobody'
 	END

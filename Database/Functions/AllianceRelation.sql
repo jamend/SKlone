@@ -15,7 +15,7 @@ BEGIN
 	SET @Sector2Alliance = (SELECT AllianceID FROM Sectors WHERE SectorID = @Sector2)
 	SET @Sector1AllianceB = (SELECT AllianceID FROM Sectors WHERE SectorID = @Sector1 AND AllianceID != 0)
 	SET @Sector2AllianceB = (SELECT AllianceID FROM Sectors WHERE SectorID = @Sector2 AND AllianceID != 0)
-	IF (@Sector1Alliance = Null) OR (@Sector2Alliance = Null) 
+	IF (@Sector1Alliance IS NULL) OR (@Sector2Alliance IS NULL) 
 	BEGIN
 		SET @Result = 0 /* no relation */
 	END
@@ -55,7 +55,7 @@ BEGIN
 		SET @Result = 3 /* allies */
 	END
 	ELSE
-	IF (@Result = Null) 
+	IF (@Result IS NULL) 
 	BEGIN
 		SET @Result = 0 /* no relation */
 	END

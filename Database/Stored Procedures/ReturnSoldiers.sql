@@ -9,19 +9,19 @@ AS
 		SET @Soldiers1 = (SELECT [Out] FROM UnitsOut WHERE UnitType = 0 AND WLID = 1  AND kdID = (SELECT COUNT(kdID) FROM UnitsTraining))
 		SET @Soldiers2 = (SELECT [Out] FROM UnitsOut WHERE UnitType = 0 AND WLID = 2  AND kdID = (SELECT COUNT(kdID) FROM UnitsTraining))
 		SET @Soldiers3 = (SELECT [Out] FROM UnitsOut WHERE UnitType = 0 AND WLID = 3 AND kdID = (SELECT COUNT(kdID) FROM UnitsTraining))
-		IF @Soldiers = NULL
+		IF @Soldiers IS NULL
 		BEGIN
 		SET @Soldiers = 0
 		END
-		IF @Soldiers1 = NULL
+		IF @Soldiers1 IS NULL
 		BEGIN
 		SET @Soldiers1 = 0
 		END
-		IF @Soldiers2 = NULL
+		IF @Soldiers2 IS NULL
 		BEGIN
 		SET @Soldiers2 = 0
 		END
-		IF @Soldiers3 = NULL
+		IF @Soldiers3 IS NULL
 		BEGIN
 		SET @Soldiers3 = 0
 		END

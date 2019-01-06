@@ -7,7 +7,7 @@ RETURNS bigint
 BEGIN
 	DECLARE @Networth bigint
 	SET @Networth = (SELECT SUM(Networth) FROM Kingdoms WHERE SectorID = @SectorID)
-	IF @Networth = Null
+	IF @Networth IS NULL
 	BEGIN
 		SET @Networth = 0
 	END

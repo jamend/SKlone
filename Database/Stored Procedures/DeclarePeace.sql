@@ -16,7 +16,7 @@ AS
 		SET @AllianceName = (SELECT AllianceName FROM Alliances WHERE AllianceID = @AllianceID)
 		SET @AllianceNameAL = (SELECT AllianceName FROM Alliances WHERE AL = @kdID)
 		SET @UniversalNews = 'The <b>' + @AllianceNameAL + '</b> alliance has declared <b>peace</b> against the <b>' + @AllianceName + '</b> alliance.'
-		IF @AllianceID = NULL
+		IF @AllianceID IS NULL
 		BEGIN
 			SET @Result = 'You did not give complete orders.'
 		END

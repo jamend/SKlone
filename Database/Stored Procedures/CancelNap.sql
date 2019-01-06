@@ -14,7 +14,7 @@ AS
 		SET @AllianceName = (SELECT AllianceName FROM Alliances WHERE AllianceID = (SELECT Nap FROM Alliances WHERE AL = @kdID))
 		SET @AllianceNameAL = (SELECT AllianceName FROM Alliances WHERE AL = @kdID)
 		SET @UniversalNews = 'The <b>' + @AllianceNameAL + '</b> alliance has canceled their <b>nap</b> treaty with the <b>' + @AllianceName + '</b> alliance.'
-		IF (SELECT Nap FROM Alliances WHERE AL = @kdID) = NULL
+		IF (SELECT Nap FROM Alliances WHERE AL = @kdID) IS NULL
 		BEGIN
 			SET @Result = 'You did not have a nap set with anyone.'
 		END
