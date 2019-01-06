@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{d34abd23-225c-4b63-9bf6-97fff452a015}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -25,6 +25,7 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
     <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <GenerateCreateScript>True</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -904,5 +905,8 @@
       <AnsiNulls>Off</AnsiNulls>
       <QuotedIdentifier>Off</QuotedIdentifier>
     </Build>
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.MinimalData.sql" />
   </ItemGroup>
 </Project>
