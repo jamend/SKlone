@@ -3,6 +3,8 @@
     [Account]  NVARCHAR (16)  NOT NULL,
     [Password] NVARCHAR (16)  NOT NULL,
     [Email]    NVARCHAR (256) NOT NULL,
+	[LastMoneyReward] [datetime] NOT NULL,
+	[LastLandReward] [datetime] NOT NULL,
     CONSTRAINT [PK_Accounts] PRIMARY KEY CLUSTERED ([kdID] ASC)
 );
 
