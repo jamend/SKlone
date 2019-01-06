@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Publics] (
-    [PublicID]   INT           IDENTITY (1, 1) NOT NULL,
+    [PublicID]   INT           NOT NULL,
     [PublicName] NVARCHAR (16) NOT NULL,
     [Password]   NVARCHAR (16) NOT NULL,
     [AL]         INT           NOT NULL,

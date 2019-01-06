@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[RaceTypes] (
-    [RaceType]            INT           IDENTITY (1, 1) NOT NULL,
+    [RaceType]            INT           NOT NULL,
     [RaceTypeName]        NVARCHAR (24) NOT NULL,
     [PopulationFactor]    REAL          CONSTRAINT [DF_RaceTypes_PopulationFactor] DEFAULT (0) NOT NULL,
     [ResearchFactor]      REAL          CONSTRAINT [DF_RaceTypes_ResearchFactor] DEFAULT (0) NOT NULL,

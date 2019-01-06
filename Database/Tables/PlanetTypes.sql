@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[PlanetTypes] (
-    [PlanetType]          INT           IDENTITY (1, 1) NOT NULL,
+    [PlanetType]          INT           NOT NULL,
     [PlanetTypeName]      NVARCHAR (24) NOT NULL,
     [PopulationFactor]    REAL          CONSTRAINT [DF_PlanetTypes_PopulationFactor] DEFAULT (1) NOT NULL,
     [ResearchFactor]      REAL          CONSTRAINT [DF_PlanetTypes_ResearchFactor] DEFAULT (1) NOT NULL,
