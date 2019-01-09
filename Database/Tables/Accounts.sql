@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Accounts] (
     [kdID]     INT            IDENTITY (1, 1) NOT NULL,
-    [Account]  NVARCHAR (16)  NOT NULL,
-    [Password] NVARCHAR (16)  NOT NULL,
+    [Account]  NVARCHAR (32)  NOT NULL,
+    [Password] NVARCHAR (64)  NOT NULL,
     [Email]    NVARCHAR (256) NOT NULL,
 	[LastMoneyReward] [datetime] NOT NULL,
 	[LastLandReward] [datetime] NOT NULL,

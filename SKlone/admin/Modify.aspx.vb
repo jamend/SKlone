@@ -120,7 +120,7 @@ Namespace admin
             SqlCommand1.Parameters.Add("@kdID", SqlDbType.Int)
             SqlCommand1.Parameters(0).Value = txtkdID.Text
             SqlCommand1.Parameters.Add("@Number", SqlDbType.NVarChar, 24)
-            SqlCommand1.Parameters(1).Value = txtUserPassword.Text
+            SqlCommand1.Parameters(1).Value = HashPassword(txtUserPassword.Text, txtUsername.Text)
             SqlCommand1.CommandTimeout = 10000000
             Session.Item("sqlConnection").Open()
             SqlCommand1.ExecuteNonQuery()

@@ -3,8 +3,8 @@ CREATE PROCEDURE dbo.CreateKingdom
 	(
 		@IP nvarchar(16),
 		@ActivationCode bigint,
-		@Account nvarchar(16),
-		@Password nvarchar(16),
+		@Account nvarchar(32),
+		@Password nvarchar(64),
 		@Email nvarchar(256),
 		@KingdomName nvarchar(24),
 		@RulerName nvarchar(24),

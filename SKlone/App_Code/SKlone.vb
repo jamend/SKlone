@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.Security.Cryptography
 
 Module GlobalStuff
     Public Const DateTimeFormatString As String = "MMMM d, h:mm tt"
@@ -41,6 +42,9 @@ Module GlobalStuff
         RevFilter = Buffer
     End Function
 
+    Public Function HashPassword(password As String, salt As String) As String
+        Return BitConverter.ToString(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes("%%skl0n3" + salt + password))).Replace("-", "").ToLowerInvariant()
+    End Function
 End Module
 
 Namespace SKSession

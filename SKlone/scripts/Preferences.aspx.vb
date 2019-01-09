@@ -58,9 +58,12 @@ Partial Class Preferences
     End Sub
 
     Private Sub cmdDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
-        Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT Password FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
         Session.Item("sqlConnection").Open()
-        If txtDeletePassword.Text = SqlCommand1.ExecuteScalar Then
+        Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT Account FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
+        Dim Account = SqlCommand1.ExecuteScalar
+        Dim SqlCommand2 As New SqlClient.SqlCommand("SELECT Password FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
+        Dim OldPassword = SqlCommand2.ExecuteScalar
+        If HashPassword(txtDeletePassword.Text, Account) = OldPassword Then
             Session.Item("sqlConnection").Close()
             Session.Item("ConfirmDelete") = True
             Response.Redirect("Delete.aspx?action=confirm", True)
@@ -72,18 +75,19 @@ Partial Class Preferences
     End Sub
 
     Private Sub cmdChangePassword_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdChangePassword.Click
-        Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT Password FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
         Session.Item("sqlConnection").Open()
-        Dim SqlData1 As SqlClient.SqlDataReader = SqlCommand1.ExecuteReader
-        SqlData1.Read()
-        If txtOldPassword.Text = SqlData1.GetString(0) Then
+        Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT Account FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
+        Dim Account = SqlCommand1.ExecuteScalar
+        Dim SqlCommand2 As New SqlClient.SqlCommand("SELECT Password FROM Accounts WHERE kdID = " & Session.Item("kdID"), Session.Item("sqlConnection"))
+        Dim OldPassword = SqlCommand2.ExecuteScalar
+        If HashPassword(txtOldPassword.Text, Account) = OldPassword Then
             If Len(txtNewPassword.Text) = 0 Then
                 lblError.Text = "One of the password fields has been left blank."
             Else
                 If txtNewPassword.Text = txtConfirm.Text Then
                     Session.Item("sqlConnection").Close()
                     SqlCommand1.CommandText = "UPDATE Accounts SET Password = @Password WHERE kdID = " & Session.Item("kdID")
-                    SqlCommand1.Parameters.Add("@Password", txtNewPassword.Text)
+                    SqlCommand1.Parameters.Add("@Password", HashPassword(txtNewPassword.Text, Account))
                     Session.Item("sqlConnection").Open()
                     SqlCommand1.ExecuteNonQuery()
                     lblError.Text = "The current password has been changed to the password you provided. You will recieve an email shortly with the new password you entered."

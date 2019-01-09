@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[SKloneChat] (
     [UserName]     NVARCHAR (50) NULL,
-    [Password]     NVARCHAR (50) NULL,
+    [Password]     NVARCHAR (64) NULL,
     [Email]        NVARCHAR (50) CONSTRAINT [DF_SKloneChat_Email] DEFAULT (N'blah') NULL,
     [Status]       TINYINT       CONSTRAINT [DF_SKloneChat_Status] DEFAULT (0) NULL,
     [Profile]      NVARCHAR (50) CONSTRAINT [DF_SKloneChat_Profile] DEFAULT (N'boo') NULL,

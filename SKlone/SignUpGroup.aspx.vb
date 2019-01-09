@@ -67,10 +67,10 @@ Partial Class SignUpGroup
                             SqlCommand1.Parameters(0).Value = Request.UserHostAddress
                             SqlCommand1.Parameters.Add("@ActivationCode", SqlDbType.BigInt)
                             SqlCommand1.Parameters(1).Value = ActivationCode
-                            SqlCommand1.Parameters.Add("@Account", SqlDbType.NVarChar, 16)
+                            SqlCommand1.Parameters.Add("@Account", SqlDbType.NVarChar, 32)
                             SqlCommand1.Parameters(2).Value = txtAccount.Text
-                            SqlCommand1.Parameters.Add("@Password", SqlDbType.NVarChar, 16)
-                            SqlCommand1.Parameters(3).Value = txtPassword.Text
+                            SqlCommand1.Parameters.Add("@Password", SqlDbType.NVarChar, 64)
+                            SqlCommand1.Parameters(3).Value = HashPassword(txtPassword.Text, txtAccount.Text)
                             SqlCommand1.Parameters.Add("@Email", SqlDbType.NVarChar, 256)
                             SqlCommand1.Parameters(4).Value = Filter(txtEmail.Text)
                             SqlCommand1.Parameters.Add("@KingdomName", SqlDbType.NVarChar, 24)

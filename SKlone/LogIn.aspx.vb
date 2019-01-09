@@ -33,7 +33,7 @@ Partial Class LogInB
     Private Sub cmdLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogIn.Click
         Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT Accounts.kdID, Kingdoms.SectorID, Sectors.Sector, Sectors.Galaxy, Kingdoms.[Name], Kingdoms.RulerName FROM Accounts, Kingdoms, Sectors WHERE Accounts.Account = @Account AND Accounts.Password = @Password AND Kingdoms.kdID = Accounts.kdID AND Sectors.SectorID = Kingdoms.SectorID", Session.Item("sqlConnection"))
         SqlCommand1.Parameters.Add("@Account", txtAccount.Text)
-        SqlCommand1.Parameters.Add("@Password", txtPassword.Text)
+        SqlCommand1.Parameters.Add("@Password", HashPassword(txtPassword.Text, txtAccount.Text))
         Session.Item("sqlConnection").Open()
         Dim SqlData1 As SqlClient.SqlDataReader = SqlCommand1.ExecuteReader(CommandBehavior.SingleRow)
         SqlData1.Read()

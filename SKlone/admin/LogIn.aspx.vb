@@ -1,3 +1,5 @@
+Imports System.Security.Cryptography
+
 Namespace admin
     Partial Class _Default
         Inherits System.Web.UI.Page
@@ -30,7 +32,7 @@ Namespace admin
         Private Sub cmdLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogIn.Click
             Dim SqlCommand1 As New SqlClient.SqlCommand("SELECT AdminID FROM Admins WHERE Username = @Username AND Password = @Password", Session.Item("sqlAdminConnection"))
             SqlCommand1.Parameters.Add("@Username", txtUsername.Text)
-            SqlCommand1.Parameters.Add("@Password", txtPassword.Text)
+            SqlCommand1.Parameters.Add("@Password", HashPassword(txtPassword.Text, txtUsername.Text))
             Session.Item("sqlAdminConnection").Open()
             Dim SqlData1 As SqlClient.SqlDataReader = SqlCommand1.ExecuteReader(CommandBehavior.SingleRow)
             If SqlData1.HasRows = False Then
