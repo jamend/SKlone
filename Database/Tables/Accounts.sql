@@ -3,8 +3,8 @@
     [Account]  NVARCHAR (32)  NOT NULL,
     [Password] NVARCHAR (64)  NOT NULL,
     [Email]    NVARCHAR (256) NOT NULL,
-	[LastMoneyReward] [datetime] NOT NULL,
-	[LastLandReward] [datetime] NOT NULL,
+	[LastMoneyReward] [datetime] NOT NULL DEFAULT (dateadd(day,(-1),getdate())),
+	[LastLandReward] [datetime] NOT NULL DEFAULT (dateadd(day,(-1),getdate())),
     CONSTRAINT [PK_Accounts] PRIMARY KEY CLUSTERED ([kdID] ASC)
 );
 
