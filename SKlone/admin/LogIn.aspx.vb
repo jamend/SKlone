@@ -26,7 +26,8 @@ Namespace admin
         Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
             If Session.Item("AdminRedirect") = "" Then Session.Item("AdminRedirect") = "admin/"
             lblError.Text = ""
-            Session.Item("sqlAdminConnection") = New SqlClient.SqlConnection("server='localhost'; integrated security=True; packet size=4096;initial catalog=sklone")
+            Session.Item("sqlConnectionStr") = ConfigurationManager.ConnectionStrings("SKloneConnection").ConnectionString
+            Session.Item("sqlAdminConnection") = New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("SKloneConnection").ConnectionString)
         End Sub
 
         Private Sub cmdLogIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogIn.Click

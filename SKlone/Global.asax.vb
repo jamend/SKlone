@@ -10,7 +10,7 @@ Public Class Global_asax
         ' Fires when the session is started
         'Sessions.Add(Session)
         Session.Item("LoggedIn") = False
-        Session.Item("sqlConnectionStr") = "server='localhost'; integrated security=True; packet size=4096;initial catalog=sklone"
+        Session.Item("sqlConnectionStr") = ConfigurationManager.ConnectionStrings("SKloneConnection").ConnectionString
         Session.Item("sqlConnection") = New SqlClient.SqlConnection(Session.Item("sqlConnectionStr"))
     End Sub
 
