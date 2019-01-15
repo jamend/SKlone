@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -93,6 +95,7 @@
     <Content Include="admin\MultiScans.aspx" />
     <Content Include="admin\Nav.htm" />
     <Content Include="admin\Query.aspx" />
+    <Content Include="admin\TickNow.aspx" />
     <Content Include="admin\Tick.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -239,7 +242,9 @@
     <Content Include="scripts\Vacation.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="SignUpGroup.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\Delete.aspx.designer.vb">
@@ -289,6 +294,13 @@
     </Compile>
     <Compile Include="admin\Query.aspx.vb">
       <DependentUpon>Query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\TickNow.aspx.designer.vb">
+      <DependentUpon>TickNow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TickNow.aspx.vb">
+      <DependentUpon>TickNow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\Tick.aspx.designer.vb">
@@ -854,6 +866,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\Query.aspx.resx">
       <DependentUpon>Query.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\TickNow.aspx.resx">
+      <DependentUpon>TickNow.aspx.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\Tick.aspx.resx">
       <DependentUpon>Tick.aspx.vb</DependentUpon>
